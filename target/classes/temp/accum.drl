@@ -1,0 +1,63 @@
+//created on: Apr 24, 2018
+package accum
+
+dialect "mvel"
+//list any import classes here.
+
+import com.accumpractice.AccumMain
+import com.accumpractice.Customer
+
+//declare any global variables here
+
+
+
+rule "accum"
+    no-loop true // 먼저 조건 참거짓을 판단한 후 하나씩 fire한다. 따라서, no-loop true와 modify를 같이 써줄 필요가 있다.
+    when
+        $c : Customer($day : day)
+        $i : (Number(intValue > 2) from accumulate
+            ($t : Customer(name == $c.name, day<$day), count($t)) == true)
+//        if ($c.getType() == "VIP") do [VIP]
+    then
+        modify($c) {setDiscount(10)};
+        System.out.println("discount set to 10");
+        System.out.println($c.getDiscount());
+    //then [VIP]
+    //    $c.setDiscount(20);
+    //    System.out.println("VIP discount set to 20");
+        
+        
+end
+
+rule "for VIP" 
+    no-loop true
+    when
+        $c : Customer(type == "VIP", $day : day)
+        $i : Number(intValue > 2) from accumulate
+            ($t : Customer(name == $c.name, day<$day), count($t))
+
+    then
+        $c.setDiscount(20);
+        System.out.println("VIP discount set to 20");
+end
+
+/*
+rule "accum2"
+    when
+        $c : Customer(discount==10)
+    then
+        System.out.println("accum2 discount: "+$c.getDiscount());
+        $c.setType("VIP");
+        System.out.println("this customer is VIP");
+end
+
+
+rule "accum3"
+    when
+        $c : Customer(discount!=10)
+    then
+        System.out.println("accum3 discount: "+$c.getDiscount());
+        $c.setType("Normal");
+        System.out.println("this customer is Normal");
+end
+*/
