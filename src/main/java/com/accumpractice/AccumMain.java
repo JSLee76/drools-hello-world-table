@@ -40,19 +40,19 @@ public class AccumMain {
 		/*kSession.insert(c10);
 		kSession.insert(c11);
 		kSession.insert(c12);*/
-		// pull test
+		// pull test 
 		kSession.fireAllRules();
 		
 		System.out.println(c1.toString());
 		System.out.println(c2.toString());
 		System.out.println(c3.toString());
-		System.out.println(c4.toString());
 		System.out.println(c5.toString());
 		System.out.println(c6.toString());
 		System.out.println(c7.toString());
 		System.out.println(c8.toString());
 		System.out.println(c9.toString());
 		System.out.println(c10.toString());
+		// Hello
 		/*System.out.println(c10.toString());
 		System.out.println(c11.toString());
 		System.out.println(c12.toString());*/
