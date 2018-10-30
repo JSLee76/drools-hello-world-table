@@ -9,7 +9,7 @@ public class AccumMain {
 		KieServices ks = KieServices.Factory.get();
 		KieContainer kContainer = ks.getKieClasspathContainer();
 		KieSession kSession = kContainer.newKieSession("accum-rule");
-		
+		//another fix
 		Customer c1 = new Customer(10, "VIP", 5, 0);
 		Customer c2 = new Customer(10, "VIP", 10, 0);
 		Customer c3 = new Customer(10, "VIP", 17, 0);
