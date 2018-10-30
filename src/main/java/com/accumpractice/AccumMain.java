@@ -26,7 +26,7 @@ public class AccumMain {
 		/*Customer2 c10 = new Customer2(20, "Normal", 4, 0);
 		Customer2 c11 = new Customer2(20, "Normal", 2, 0);
 		Customer2 c12 = new Customer2(20, "Normal", 10, 0);*/
-		
+		// github에서 
 		kSession.insert(c1);
 		kSession.insert(c2);
 		kSession.insert(c3);
