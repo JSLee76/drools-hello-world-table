@@ -40,7 +40,7 @@ public class AccumMain {
 		/*kSession.insert(c10);
 		kSession.insert(c11);
 		kSession.insert(c12);*/
-		
+		// pull test
 		kSession.fireAllRules();
 		
 		System.out.println(c1.toString());
