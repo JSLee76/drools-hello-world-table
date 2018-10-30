@@ -29,10 +29,6 @@ public class AccumMain {
 		// github에서 
 		kSession.insert(c1);
 		kSession.insert(c2);
-		kSession.insert(c3);
-		kSession.insert(c4);
-		kSession.insert(c5);
-		kSession.insert(c6);
 		kSession.insert(c7);
 		kSession.insert(c8);
 		kSession.insert(c9);
