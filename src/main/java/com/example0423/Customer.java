@@ -18,6 +18,7 @@ public class Customer {
     public Customer(CustomerType ct, int y) {
     	this.type = ct;
     	this.years = y;
+    	// hello
     }
 
 	public int getDiscount() {
